@@ -29,6 +29,11 @@ app.get('/about', function(request, response) {
  });
 
 
+ app.get('/compose', function(request, response) {
+  response.render('compose')
+ });
+
+
 
 
 
