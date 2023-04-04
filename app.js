@@ -20,6 +20,13 @@ app.get("/",(request, response) => {
   response.render('home', {startingContent:homeStartingContent});
 });
 
+app.get('/about', function(request, response) {
+  response.render('about', {about:aboutContent})
+});
+
+ app.get('/contact', function(request, response) {
+  response.render('contact', {contact:contactContent})
+ });
 
 
 
