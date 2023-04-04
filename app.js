@@ -35,7 +35,8 @@ app.get('/about', function(request, response) {
 
 //Use the input.name after "request.body"
 app.post('/compose', (request, response)=>{
-  console.log(request.body.newTitle);
+
+  console.log(request.body.postTitle);
 })
 
 
