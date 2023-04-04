@@ -15,29 +15,38 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
+const posts = [];
 
 app.get("/",(request, response) => {
   response.render('home', {startingContent:homeStartingContent});
 });
 
 app.get('/about', function(request, response) {
-  response.render('about', {about:aboutContent})
+  response.render('about', {about:aboutContent});
 });
 
  app.get('/contact', function(request, response) {
-  response.render('contact', {contact:contactContent})
+  response.render('contact', {contact:contactContent});
  });
 
 
  app.get('/compose', function(request, response) {
-  response.render('compose')
+  response.render('compose');
  });
 
 //Use the input.name after "request.body"
 app.post('/compose', (request, response)=>{
 
-  console.log(request.body.postTitle);
-})
+  const post = {
+    "title":request.body.postTitle,
+    "content":request.body.postBody
+  };
+  posts.push(post);
+  response.redirect('/')
+  console.log(posts);
+
+});
+
 
 
 app.listen(3000, function() {
