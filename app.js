@@ -33,11 +33,9 @@ app.get('/about', function(request, response) {
   response.render('compose')
  });
 
-
-
-
-
-
+app.post('/', (request, response)=>{
+  console.log(request.body.newPublish);
+})
 
 
 app.listen(3000, function() {
