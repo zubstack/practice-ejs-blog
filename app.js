@@ -17,6 +17,9 @@ app.use(express.static("public"));
 
 const posts = [];
 
+
+// GET //
+
 app.get("/",(request, response) => {
   response.render('home', {
     startingContent:homeStartingContent,
@@ -37,6 +40,9 @@ app.get('/about', function(request, response) {
   response.render('compose');
  });
 
+
+//POST//
+
 //Use the input.name after "request.body"
 app.post('/compose', (request, response)=>{
 
@@ -46,11 +52,10 @@ app.post('/compose', (request, response)=>{
   };
   posts.push(post);
   response.redirect('/')
- 
-
 });
 
 
+//LISTEN//
 
 app.listen(3000, function() {
   console.log("Server started on port 3000");
