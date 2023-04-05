@@ -44,10 +44,10 @@ app.get('/posts/:page', function(request, response){
   const requestedPage = request.params.page;
 
   posts.forEach((post)=> {
-    const postTitle = post.title
+    const postTitle = post.title;
     if(requestedPage == postTitle){
-      console.log('Math found!')
-    }  
+      console.log('Math found!');
+    };
   });
 });
 
@@ -61,7 +61,7 @@ app.post('/compose', (request, response)=>{
     "content":request.body.postBody
   };
   posts.push(post);
-  response.redirect('/')
+  response.redirect('/');
 });
 
 
