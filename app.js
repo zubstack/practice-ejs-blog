@@ -40,6 +40,9 @@ app.get('/about', function(request, response) {
   response.render('compose');
  });
 
+app.get('/posts/:page', function(request, response){
+  console.log(request.params.page)
+})
 
 //POST//
 
