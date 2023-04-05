@@ -41,8 +41,15 @@ app.get('/about', function(request, response) {
  });
 
 app.get('/posts/:page', function(request, response){
-  console.log(request.params.page)
-})
+  const requestedPage = request.params.page;
+
+  posts.forEach((post)=> {
+    const postTitle = post.title
+    if(requestedPage == postTitle){
+      console.log('Math found!')
+    }  
+  });
+});
 
 //POST//
 
