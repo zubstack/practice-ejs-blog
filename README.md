@@ -18,6 +18,12 @@ app.listen(3000, function () {
 });
 ```
 
+## We recommend install **nodemon** globally:
+
+```bash
+npm install -g nodemon # or using yarn: yarn global add nodemon
+```
+
 ## Command line:
 
 ```bash
@@ -26,6 +32,6 @@ npm run dev
 
 ## See our project!
 
-> Go to [title][def]
+> Go to [localHost][def]
 
 [def]: https://localhost:3000
