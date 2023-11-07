@@ -1,37 +1,16 @@
-# Blog con EJS
+# Practice: Blog site with EJS
 
-This is a BLOG constructed by "EJS" framework
+This project is part of the learning path of the course: **The complete web development bootcamp**.
+In this project you will experience for the first time working with a JS framework (EJS) that significantly simplifies the work of creating a web application.
 
-## To code:
+## View
 
-First things first:
+![blog_ejs](./blog_ejs.png)
 
-```bash
-npm install
-```
+## Technologies
 
-## Open the server to see this project:
-
-```javascript
-app.listen(3000, function () {
-  console.log("Server started on port 3000");
-});
-```
-
-## We recommend install **nodemon** globally:
-
-```bash
-npm install -g nodemon # or using yarn: yarn global add nodemon
-```
-
-## Command line:
-
-```bash
-npm run dev
-```
-
-## See our project!
-
-> Go to [localHost][def]
-
-[def]: https://localhost:3000
+    - HTML
+    - CSS
+    - Node
+    - Express
+    - EJS
